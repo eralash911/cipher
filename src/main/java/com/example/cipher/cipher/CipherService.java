@@ -14,7 +14,8 @@ import java.util.Base64;
 import static org.springframework.cache.interceptor.SimpleKeyGenerator.generateKey;
 
 public class CipherService {
-    private static final SecretKey KEY =  generateKey(256);
+    private static final SecretKey KEY =  generateKey(256);// при старте приложения определяем ключ шифрования
+
     private static final AlgorithmParameterSpec IV = generateIv();
     private static final String ALGORITHM = "ChaCha20-Poly1305";
 
